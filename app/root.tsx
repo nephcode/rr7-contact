@@ -1,5 +1,7 @@
 import {
   Form,
+  Link,
+  Outlet,
   Scripts,
   ScrollRestoration,
   isRouteErrorResponse,
@@ -8,7 +10,15 @@ import type { Route } from "./+types/root";
 
 import appStylesHref from "./app.css?url";
 
+import { getContacts } from "./data";
+
+export async function clientLoader() {
+  const contact = await getContacts();
+  return { contacts };
+}
+
 export default function App() {
+  const { contacts } = loaderData;
   return (
     <>
       <div id="sidebar">
@@ -31,13 +41,16 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <a href={`/contacts/1`}>Your Name</a>
+              <Link to={`/contacts/1`}>Nepha Cohen</Link>
             </li>
             <li>
-              <a href={`/contacts/2`}>Your Friend</a>
+              <Link to={`/contacts/2`}>Neah Mashiah</Link>
             </li>
           </ul>
         </nav>
+      </div>
+      <div id="detail">
+        <Outlet />
       </div>
     </>
   );
