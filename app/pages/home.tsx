@@ -1,4 +1,4 @@
-export default function Home() {
+const Home = () => {
     return (
         <p id="index-page">
             This is a demo for React Router.
@@ -11,3 +11,4 @@ export default function Home() {
         </p>
     );
 }
+export default Home;
