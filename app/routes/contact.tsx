@@ -19,7 +19,6 @@ export default function Contact() {
         favorite: true,
     };
 
-const Contact: FC = () => {
     return (
         <div id="contact">
             <div>
