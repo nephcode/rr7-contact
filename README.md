@@ -73,4 +73,4 @@ Make sure to deploy the output of `react-router build`
 - `build/client`
 
 
-![Cover](https://github.com/nephcode/illuminateam/blob/main/.github/images/githubReadmeFooter.png)
+![Cover](https://github.com/nephcode/rr7-contact/blob/main/.github/images/githubReadmeFooter.png)
