@@ -9,7 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import appStylesHref from "./app.css?url";
-import { getContacts } from "./data";
+import { getContacts } from "./data/data";
 
 export function HydrateFallback() {
   return (

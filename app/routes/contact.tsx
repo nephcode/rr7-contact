@@ -5,13 +5,10 @@
 // Import Type ====================================================//
 //import type { FC } from 'react';
 import { Form } from "react-router";
-import type { ContactRecord } from "../data";
-import { getContact } from "../data";
+import type { ContactRecord } from "../data/data";
+import { getContact } from "../data/data";
 import type { Route } from "./+types/contact";
-
 //  ===============================================//
-
-
 
 export async function loader({ params }: Route.LoaderArgs) {
     const contact = await getContact(params.contactId);

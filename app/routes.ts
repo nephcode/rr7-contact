@@ -1,3 +1,8 @@
+// ================================================================//
+// ROUTE ==========================================================//
+// ================================================================//
+
+// IMPORT =========================================================//
 import type { RouteConfig } from "@react-router/dev/routes";
 import {
   index,
@@ -5,6 +10,7 @@ import {
   route,
 } from "@react-router/dev/routes";
 
+// EXPORT =========================================================//
 export default [
   layout("layouts/sidebar", [
     index("routes/home.tsx"),
@@ -12,3 +18,4 @@ export default [
   ]),
   route("about", "routes/about.tsx"),
 ] satisfies RouteConfig;
+// ================================================================//

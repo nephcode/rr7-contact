@@ -1,12 +1,21 @@
+// ================================================================//
+// SIDEBAR ========================================================//
+// ================================================================//
+
+// IMPORT =========================================================//
+
 import { Form, Link, Outlet } from "react-router";
-import { getContacts } from "../data";
+import { getContacts } from "../../data/data";
 import type { Route } from "./+types/sidebar";
 
+
+// ClientLoader ==================================================//
 export async function clientLoader() {
     const contacts = await getContacts();
     return { contacts };
 }
 
+// ================================================================//
 export default function SidebarLayout({
     loaderData,
 }: Route.ComponentProps) {
@@ -72,3 +81,4 @@ export default function SidebarLayout({
         </>
     );
 }
+// ================================================================//
