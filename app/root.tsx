@@ -1,3 +1,8 @@
+// ================================================================//
+// ROOT APP =======================================================//
+// ================================================================//
+
+// Import =========================================================//
 import {
   Form,
   Link,
@@ -10,7 +15,23 @@ import {
 import type { Route } from "./+types/root";
 import appStylesHref from "./app.css?url";
 import { getContacts } from "./data/data";
+// Import End =====================================================//
 
+
+// ClientLoader ===================================================//
+export async function clientLoader() {
+  const contacts = await getContacts();
+  return { contacts };
+}
+// ClientLoader End ===============================================//
+
+// App Start ======================================================//
+export default function App() {
+  return <Outlet />;
+}
+// App End ========================================================//
+
+// HydrateFallback ================================================//
 export function HydrateFallback() {
   return (
     <div id="loading-splash">
@@ -19,20 +40,15 @@ export function HydrateFallback() {
     </div>
   );
 }
-
-export async function clientLoader() {
-  const contacts = await getContacts();
-  return { contacts };
-}
-
-export default function App() {
-  return <Outlet />;
-}
+// HydrateFallback End ============================================//
 
 
+// Layout =========================================================//
 // The Layout component is a special export for the root route.
-// It acts as your document's "app shell" for all route components, HydrateFallback, and ErrorBoundary
-// For more information, see https://reactrouter.com/explanation/special-files#layout-export
+// It acts as your document's "app shell" for all route components, 
+// HydrateFallback, and ErrorBoundary
+// For more information, 
+// see https://reactrouter.com/explanation/special-files#layout-export
 export function Layout({ children }: { children: React.ReactNode }) {
   console.log("Layout");
   return (
@@ -51,9 +67,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
+// Layout End =====================================================//
 
-// The top most error boundary for the app, rendered when your app throws an error
-// For more information, see https://reactrouter.com/start/framework/route-module#errorboundary
+// ErrorBoundary ==================================================//
+// The top most error boundary for the app, 
+// rendered when your app throws an error
+// For more information, 
+// see https://reactrouter.com/start/framework/route-module#errorboundary
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
@@ -82,3 +102,4 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     </main>
   );
 }
+// ErrorBoundary End ==============================================//
