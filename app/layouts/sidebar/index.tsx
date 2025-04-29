@@ -1,6 +1,6 @@
 import { Form, Link, Outlet } from "react-router";
 import { getContacts } from "../../data";
-import type { Route } from "../../../+types/sidebar";
+import type { Route } from "./+types/sidebar";
 
 
 export async function loader() {

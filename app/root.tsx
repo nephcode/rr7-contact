@@ -8,10 +8,7 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-
 import appStylesHref from "./app.css?url";
-
-
 import { getContacts } from "./data";
 
 export function HydrateFallback() {
@@ -23,22 +20,13 @@ export function HydrateFallback() {
   );
 }
 
-
 export async function clientLoader() {
   const contacts = await getContacts();
   return { contacts };
 }
 
-export default function App({
-  loaderData,
-}: Route.ComponentProps) {
-  const { contacts } = loaderData;
-
-  return (
-    <>
-
-    </>
-  );
+export default function App() {
+  return <Outlet />;
 }
 
 

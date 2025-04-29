@@ -6,7 +6,19 @@
 //import type { FC } from 'react';
 import { Form } from "react-router";
 import type { ContactRecord } from "../data";
+import { LoaderArgs } from "@react-router/node";
+
 //  ===============================================//
+
+
+
+export async function loader({ params }: Route.LoaderArgs) {
+    const contact = await getContact(params.contactId);
+    if (!contact) {
+        throw new Response("Not Found", { status: 404 });
+    }
+    return { contact };
+}
 
 
 export default function Contact() {
