@@ -4,8 +4,8 @@
 
 // IMPORT =========================================================//
 import { Form, Link, Outlet } from "react-router";
-import type { Route } from "./+types/sidebar";
-import { getContacts } from "../data/data";
+import type { Route } from "../+types/sidebar";
+import { getContacts } from "../../data/data";
 // IMPORT End =====================================================//
 
 // ClientLoader ===================================================//
