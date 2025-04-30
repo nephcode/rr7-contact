@@ -12,7 +12,7 @@ import {
 
 // EXPORT =========================================================//
 export default [
-  layout("layouts/sidebar", [
+  layout("layouts/sidebar.tsx", [
     index("pages/home.tsx"),
     route("contacts/:contactId", "routes/contact.tsx"),
   ]),
