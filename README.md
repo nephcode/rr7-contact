@@ -26,7 +26,7 @@ Template first init project with ` vite``react `on `bun runtime`
 
 ## RUNNING THE APPS
 
-No build, that's a pure html
+RR 7 server remix 
 
 
 
