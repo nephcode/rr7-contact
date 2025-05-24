@@ -27,7 +27,7 @@ Template first init project with ` vite``react `on `bun runtime`
 ## RUNNING THE APPS
 
 RR 7 server remix final 
-voila voila
+voila voila & voila
 
 
 
