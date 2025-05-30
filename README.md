@@ -33,6 +33,7 @@ j'ai optimiser
 
 ## optimise the code 
 this the rsc update by bryan florence 
+my qwerty keyboard for code session and optimise my skill ever 
 
 
 
