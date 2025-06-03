@@ -29,7 +29,7 @@ Template first init project with ` vite``react `on `bun runtime`
 RR 7 server remix final 
 voila voila & voila _ hihi voila
 cool ce tempes mods en tout cas pour une optimisation pour pas grand chose c'est vraiment top. bref 
-j'ai optimiser 
+j'ai optimisé le tout pour bosser dans de bonnes conditions pour une excellente dx
 
 ## optimise the code 
 this the rsc update by bryan florence 
