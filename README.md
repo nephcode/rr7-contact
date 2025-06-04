@@ -34,7 +34,7 @@ j'ai optimisé le tout pour bosser dans de bonnes conditions pour une excellente
 ## optimise the code 
 this the rsc update by bryan florence 
 my qwerty keyboard for code session and optimise my skill ever 
-
+here my friend you know and I know too 
 
 
 
